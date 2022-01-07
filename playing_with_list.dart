@@ -33,13 +33,13 @@ reverseTheList(List numList){
 find2ndLargest(List numList){
   int max=numList[0];
   int max2 = 0;
-  for(var i=0;i<numList.length;i++){
+  for(var i=1;i<numList.length;i++){
     if(numList[i]>max){
        max2=max;
       max = numList[i];
      
     }
-    else if(numList[i]>max2 || max==max2){
+    else if(numList[i]>max2 && numList[i]<max){
       max2 = numList[i];
     }
   }
